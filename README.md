@@ -13,10 +13,10 @@ You should create one R script called run_analysis.R that does the following.
 ## Steps to work on this course project
 
 
-1. Run '''source("run_analysis.R")'''
-2. It should download and unzip the data into '''./assignment/UCI HAR Dataset'''
-3. On successful completion generate  a new file '''tidy.txt''' in '''./assignment/UCI HAR Dataset'''
+1. Run ```source("run_analysis.R")```
+2. It should download and unzip the data into ```./assignment/UCI HAR Dataset```
+3. On successful completion generate  a new file ```tidy.txt``` in ```./assignment/UCI HAR Dataset```
 
 ## Dependencies
 
-'''run_analysis.R''' file will help you to install the dependencies automatically. It depends on '''plyr''' and '''data.table'''. 
+```run_analysis.R``` file will help you to install the dependencies automatically. It depends on ```plyr``` and ```data.table```. 
