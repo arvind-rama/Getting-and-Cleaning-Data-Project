@@ -8,6 +8,14 @@ if (!file.exists("assignment")) {
   }
 }
 
+if (!require("data.table")) {
+  install.packages("data.table")
+}
+
+if (!require("plyr")) {
+  install.packages("plyr")
+}
+
 require("data.table")
 
 features <- read.table("./assignment/UCI HAR Dataset/features.txt")[,2]
@@ -46,7 +54,7 @@ merged_test <- cbind(stdmeantest.x, test.y, test.subject)
 
 completely_merged_data = rbind(merged_train, merged_test)
 
-library(plyr)
+require("plyr")
 tidy <- ddply(completely_merged_data, .(subject, activitydesc), function(x) colMeans(x[,1:60]))
 
 write.table(tidy, "./assignment/UCI HAR Dataset/tidy.txt", row.names=FALSE)
